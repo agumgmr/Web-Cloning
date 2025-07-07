@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>List</h2>
+<ul>
+    {% for x in database %}
+        <li>
+            <a href="{{ url_for('details', id=x[0]) }}">{{ x[1] }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
